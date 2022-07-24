@@ -1,17 +1,13 @@
 .excellence {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin: 0px;
 }
 .excellence__list {
-    display: flex;
+    // display: flex;
 }
 .excellence__item {
-    width: 270px;
-
-&:not(:last-child) {
-    margin-right: 30px;
-}
+    width: 450px;
 }
 
 .excellence__icon {
@@ -19,11 +15,10 @@
     background-color: var(--vector-bg);
     margin-bottom: 30px;
     display: flex;
-    align-items: center;
-    max-width: 270px;
-    width: 100%;
+    justify-content: center;
+    width: 450px;
     height: auto;
-    padding: 25px 100px;
+    padding: 25px 190px;
 }
 .excellence__title {
     font-style: normal;
@@ -41,4 +36,5 @@
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--text-sec);
+    margin-bottom: 30px;
 }

@@ -1,22 +1,24 @@
 .banner {
-    padding-bottom: 200px;
-    padding-top: 200px;
-    margin: 0px;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
     text-align: center;
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right,
+    height: auto;
+    width: 480px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width:767px) {
+        background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/banner.jpg);
+        url(../../images/banner/banner_mob.jpg);
     background-color: var(--tagline-bg);
+    }
 }
 .banner__tagline {
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.35;
     text-align: center;
     letter-spacing: 0.06em;

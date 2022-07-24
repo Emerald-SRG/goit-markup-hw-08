@@ -1,0 +1,44 @@
+.excellence {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin: 0px;
+}
+.excellence__list {
+    display: flex;
+}
+.excellence__item {
+    width: 270px;
+
+&:not(:last-child) {
+    margin-right: 30px;
+}
+}
+
+.excellence__icon {
+    border-radius: 4px;
+    background-color: var(--vector-bg);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    max-width: 270px;
+    width: 100%;
+    height: auto;
+    padding: 25px 100px;
+}
+.excellence__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.excellence__explanation {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--text-sec);
+}

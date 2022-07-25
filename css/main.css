@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
   display: block;
   padding: 0px;
@@ -88,6 +89,54 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header__logo--inverse {
   color: #212121;
+}
+
+.mob-button__close {
+  display: none;
+}
+
+.mob-button.is-open .mob-button__menu {
+  display: none;
+}
+
+.mob-button.is-open .mob-button__close {
+  display: block;
+}
+
+.header__mob-button {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 15px;
+  border: 0;
+  background-color: transparent;
+}
+
+.mob-button__icon {
+  fill: #000;
+}
+
+.mob-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.mob-menu.is-open {
+  display: block;
 }
 
 .header-nav {
@@ -472,7 +521,7 @@ h1, h2, h3, h4, h5, h6, p {
           align-items: center;
   width: 100%;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;

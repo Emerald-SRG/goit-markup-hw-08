@@ -1,7 +1,11 @@
 .excellence {
     padding-top: 60px;
     padding-bottom: 60px;
-    margin: 0px;
+    
+    @media screen and (max-width:767px) {
+        width: 480px;
+        margin: 0 auto;
+    }
 }
 .excellence__list {
     // display: flex;

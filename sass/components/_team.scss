@@ -2,6 +2,11 @@
     background-color: var(--team-bg);
     padding-top: 60px;
     padding-bottom: 60px;
+    
+    @media screen and (max-width:767px) {
+        width: 480px;
+        margin: 0 auto;
+    }
 }
 .team__title {
     font-style: normal;

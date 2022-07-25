@@ -1,6 +1,11 @@
 .customers {
     padding-top: 60px;
     padding-bottom: 60px;
+    
+    @media screen and (max-width:767px) {
+        width: 480px;
+        margin: 0 auto;
+    }
 }
 .customers__title {
     font-style: normal;

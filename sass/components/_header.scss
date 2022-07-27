@@ -1,5 +1,4 @@
 .header {
-    position: relative;
     border-bottom: 1px solid #ECECEC;
     display: block;
     padding: 0px;
@@ -10,7 +9,7 @@
 .header__logo-box {
     display: flex;
     align-items: center;
-    
+    position: relative;
 }
 .header__logo {
     font-family: 'Raleway';
@@ -50,7 +49,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    right: 15px;
+    right: 0;
     cursor: pointer;
     border: 0;
     background-color: transparent;

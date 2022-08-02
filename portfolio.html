@@ -22,26 +22,31 @@
           Web<span class="header__logo--inverse">Studio</span></a
         >
 
-        <button type="button"
-                class="mob-button header__mob-button is-open"
-                aria-expanded="false"
-                aria-controls="mob-menu" 
-                data-menu-button>
+        <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
           <svg class="mob-button__icon" width="40" height="40"
           aria-label="Вызов мобильного меню">
-            <use class="mob-button__menu" href="./images/icons.svg#menu-mob"></use>
-            <use class="mob-button__close" href="./images/icons.svg#close-mob"></use>
+            <use class="js-open-menu" href="./images/icons.svg#menu-mob"></use>
           </svg>
         </button>
         
-        <div class="mob-menu is-open" id="mob-menu" data-menu>
+        <div class="js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg class="mob-button__icon" width="40" height="40" fill="#000000">
+              <use href="./images/icons.svg#close-mob"></use>
+            </svg>
+              
+          </button>
 
           <ul class="list mob-menu__list-nav">
             <li class="item-nav mob-menu__item-nav">
               <a class="link item-nav__link" href="./index.html">Студия</a>
             </li>
             <li class="item-nav mob-menu__item-nav">
-              <a class="link item-nav__link" href="./portfolio.html">Портфолио</a>
+              <a class="link item-nav__link item-nav__link--current" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="item-nav mob-menu__item-nav"><a class="link item-nav__link" href="./index.html">Контакты</a></li>
           </ul>
@@ -75,6 +80,7 @@
         </ul>
         </div>
 
+        <div class="header__hidden-box">
         <nav class="header-nav">
           <ul class="list header-nav__list">
             <li class="header-nav__item">
@@ -104,7 +110,8 @@
             </svg>+38 096 111 11 11</a
             >
           </li>
-      </ul>
+        </ul>
+      </div>
       </div>
   
   </header>
@@ -133,12 +140,29 @@
           <ul class="list project-cards">
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
-                  class="project-cards__image"
-                  src="./images/portfolio/portfolio-1_mob.jpg"
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-1_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-1_tab.jpg 1x, ./images/portfolio/portfolio-1_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-1_mob.jpg 1x, ./images/portfolio/portfolio-1_mob@2x.jpg 2x"
+                  />
+                  <img
+                      class="project-cards__image" src="./images/portfolio/portfolio-1_mob.jpg"
                   alt="Технокряк"
-                  width="450"
                 />
+                </picture>
+  
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -152,14 +176,34 @@
                 <p class="titles__description">Веб-сайт</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-2_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-2_tab.jpg 1x, ./images/portfolio/portfolio-2_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-2_mob.jpg 1x, ./images/portfolio/portfolio-2_mob@2x.jpg 2x"
+                  />
+                  <img
                   class="project-cards__image"
                   src="./images/portfolio/portfolio-2_mob.jpg"
                   alt="New Orlean vs Golden Star"
-                  width="450"
+                  
                 />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -175,14 +219,33 @@
                 <p class="titles__description">Дизайн</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-3_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-3_tab.jpg 1x, ./images/portfolio/portfolio-3_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-3_mob.jpg 1x, ./images/portfolio/portfolio-3_mob@2x.jpg 2x"
+                  />
+                  <img
                   class="project-cards__image"
                   src="./images/portfolio/portfolio-3_mob.jpg"
                   alt="Seafood"
-                  width="450"
                 />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -198,7 +261,27 @@
             </li>
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img class="project-cards__image" src="./images/portfolio/portfolio-4_mob.jpg" alt="Prime" width="450" />
+              <picture>
+                
+                <source 
+                  media="(min-width: 1200px)"
+                  srcset="./images/portfolio/portfolio-4_desk.jpg"
+                />
+                
+                <source 
+                  media="(min-width: 768px)"
+                  srcset="./images/portfolio/portfolio-4_tab.jpg 1x, ./images/portfolio/portfolio-4_tab@2x.jpg 2x"
+                
+                />
+               
+                <source 
+                  media="(max-width: 767px)"
+                  srcset="./images/portfolio/portfolio-4_mob.jpg 1x, ./images/portfolio/portfolio-4_mob@2x.jpg 2x"
+                />
+                <img class="project-cards__image" src="./images/portfolio/portfolio-4_mob.jpg" alt="Prime"/>
+              </picture>
+              
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -212,9 +295,28 @@
                 <p class="titles__description">Маркетинг</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img class="project-cards__image" src="./images/portfolio/portfolio-5_mob.jpg" alt="Boxes" width="450" />
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-5_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-5_tab.jpg 1x, ./images/portfolio/portfolio-5_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-5_mob.jpg 1x, ./images/portfolio/portfolio-5_mob@2x.jpg 2x"
+                  />
+                  <img class="project-cards__image" src="./images/portfolio/portfolio-5_mob.jpg" alt="Boxes"  />
+                </picture>
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -228,14 +330,34 @@
                 <p class="titles__description">Приложение</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-6_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-6_tab.jpg 1x, ./images/portfolio/portfolio-6_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-6_mob.jpg 1x, ./images/portfolio/portfolio-6_mob@2x.jpg 2x"
+                  />
+                  <img
                   class="project-cards__image"
                   src="./images/portfolio/portfolio-6_mob.jpg"
                   alt="Inspiration has no Borders"
-                  width="450"
+                  
                 />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -251,14 +373,33 @@
                 <p class="titles__description">Веб-сайт</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-7_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-7_tab.jpg 1x, ./images/portfolio/portfolio-7_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-7_mob.jpg 1x, ./images/portfolio/portfolio-7_mob@2x.jpg 2x"
+                  />
+                  <img
                   class="project-cards__image"
                   src="./images/portfolio/portfolio-7_mob.jpg"
                   alt="Limited Edition"
-                  width="450"
                 />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -272,9 +413,29 @@
                 <p class="titles__description">Дизайн</p>
               </div>
             </li>
+
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img class="project-cards__image" src="./images/portfolio/portfolio-8_mob.jpg" alt="LAB" width="450" />
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-8_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-8_tab.jpg 1x, ./images/portfolio/portfolio-8_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-8_mob.jpg 1x, ./images/portfolio/portfolio-8_mob@2x.jpg 2x"
+                  />
+                  <img class="project-cards__image" src="./images/portfolio/portfolio-8_mob.jpg" alt="LAB" />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -290,12 +451,30 @@
             </li>
             <li class="project-cards__item project-cards__item--float">
               <div class="project-cards__container">
-                <img
+                <picture>
+                
+                  <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio-9_desk.jpg"
+                  />
+                  
+                  <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio-9_tab.jpg 1x, ./images/portfolio/portfolio-9_tab@2x.jpg 2x"
+                  
+                  />
+                 
+                  <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio-9_mob.jpg 1x, ./images/portfolio/portfolio-9_mob@2x.jpg 2x"
+                  />
+                  <img
                   class="project-cards__image"
                   src="./images/portfolio/portfolio-9_mob.jpg"
                   alt="Growing Business"
-                  width="450"
                 />
+                </picture>
+                
                 <div class="hidden-box project-cards__hidden-box">
                   <p class="hidden-box__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -417,6 +596,12 @@
       </div>
   </footer>
 
-  <script src="./js/mob-menu.js"></script>
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

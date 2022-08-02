@@ -3,8 +3,21 @@
     padding-bottom: 60px;
 }
 
+.excellence__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .excellence__item {
-    max-width: 450px;
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        flex-wrap: wrap;
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+    }
 }
 
 .excellence__icon {
@@ -15,7 +28,12 @@
     justify-content: center;
     width: 450px;
     height: auto;
-    padding: 25px 190px;
+    padding: 25px 25px;
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        flex-wrap: wrap;
+    }
 }
 .excellence__title {
     font-style: normal;

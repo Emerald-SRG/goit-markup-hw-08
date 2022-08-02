@@ -1,19 +1,50 @@
 .banner {
-    padding-bottom: 118px;
-    padding-top: 118px;
-    margin: 0 auto;
-    text-align: center;
-    height: auto;
-    width: 480px;
+    
     background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    background-position: center;
+    text-align: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
-    @media screen and (max-width:767px) {
-        background-image: linear-gradient(to right,
+    background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url(../../images/banner/banner_mob.jpg);
     background-color: var(--tagline-bg);
-    }
+    
+
+   
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner/banner_mob@2x.jpg);
+}
+
+@media screen and (min-width: 768px) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner/banner_tab.jpg);
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner/banner_tab@2x.jpg);
+}
+}
+
+@media screen and (min-width: 1200px) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner/banner_desk.jpg);
+padding-bottom: 200px;
+padding-top: 200px;
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/banner/banner_desk@2x.jpg);    
+}
+}
 }
 .banner__tagline {
     font-style: normal;

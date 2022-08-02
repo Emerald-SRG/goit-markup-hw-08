@@ -30,13 +30,28 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-
-    &:nth-child(2n+1) {
-        margin-right: 30px;
+    
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+        &:nth-child(n+5) {
+            margin-bottom: 0;
+        }
     }
-    &:nth-child(n+5) {
-        margin-bottom: 0;
+
+    @media screen and (min-width: 678px) {
+        width: 226px;
+        margin-bottom: 30px;
+        &:nth-child(n+4) {
+            margin-bottom: 0;
+        }
+
+        margin-right: 30px;
+        &:nth-child(n+3) {
+            margin-right: 0;
+        }
     }
 }
 .customers__link {

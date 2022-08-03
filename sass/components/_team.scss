@@ -25,16 +25,25 @@
     border-radius: 0px 0px 4px 4px;
     margin-bottom: 30px;
 
-    &:last-child {
-    margin-bottom: 0;
-    }
-
     @media screen and (min-width: 768px) {
         width: 354px;
         flex-wrap: wrap;
         &:nth-child(2n+1) {
             margin-right: 30px;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.team__image {
+    @media screen and (max-width: 676px) {
+        max-width: 100%;
     }
 }
 

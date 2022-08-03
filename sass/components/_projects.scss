@@ -1,11 +1,30 @@
+.projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
 
 .projects__list {
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
     padding: auto;
+    justify-content: center;
+
+    @media screen and (min-width:768px) {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+
+    }
 }
 .projects__item {
     margin-bottom: 15px;
@@ -14,6 +33,10 @@
     margin-right: 8px;
 }
 &:nth-child(n+4) {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
     margin-bottom: 0;
 }
 }
@@ -41,19 +64,36 @@
 }
 }
 .project-cards {
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-wrap: wrap;
         margin: calc(-1 * var(--indent) / 2);
-    }
-   
 
-&:not(:last-child) {
-    margin-bottom: 15px;
-}
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .project-cards__item {
+    @media screen and (min-width:768px) and (max-width: 1199px){
+        max-width: 354px;
+        flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+    }
+
     @media screen and (min-width: 1200px) {
         flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
         margin: calc(var(--indent) / 2);
@@ -82,6 +122,12 @@
     position: relative;
     overflow: hidden;
 }
+.project-cards__image {
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+    }
+}
+
 .project-cards__hidden-box {
     position: absolute;
     transform: translateY(100%);

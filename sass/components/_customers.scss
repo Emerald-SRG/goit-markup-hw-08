@@ -41,16 +41,23 @@
         }
     }
 
-    @media screen and (min-width: 678px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 226px;
         margin-bottom: 30px;
-        &:nth-child(n+4) {
-            margin-bottom: 0;
+        &:nth-child(2) {
+            margin-right: 30px;
+            margin-left: 30px;
         }
+        &:nth-child(5) {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
 
-        margin-right: 30px;
-        &:nth-child(n+3) {
-            margin-right: 0;
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+        &:not(:last-child){
+            margin-right: 30px;
         }
     }
 }

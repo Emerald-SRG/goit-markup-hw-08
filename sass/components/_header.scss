@@ -6,11 +6,6 @@
     padding-bottom: 16px;
     margin: 0 auto;
 
-    @media screen and(min-width:768px) {
-        padding-top: 26px;
-        padding-bottom: 26px;
-    }
-        
     @media screen and(min-width:1200px) {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -44,6 +39,10 @@
     }
     @media screen and (min-width: 768px) {
         margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
     }
 }
 
@@ -155,14 +154,13 @@
     color: var(--text-sec);
 }
 .mob-menu__list-social {
-    left: 0;
-    display: inline-flex;
+    display: flex;
+    padding-left: 40px;
+    flex-wrap: wrap;
     text-align: left;
     margin-top: 64px;
 }
 .mob-menu__item-social {
-    
-
     &:not(:last-child) {
         border-right: 3px solid rgba(33, 33, 33, 0.2);
         padding-right: 10px;
@@ -178,8 +176,6 @@
     color: var(--accent);
 }
 
-
-
 .header-box {
     display: none;
 
@@ -194,7 +190,7 @@
 
 .header-nav {
     display: flex;
-    
+    align-items: center;
 }
 .header-nav__list {
     display: flex;
@@ -221,6 +217,14 @@
     padding-bottom: 32px;
     transition-property: color;
 
+    @media screen and (min-width: 768px) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
 &:hover,
 &:focus {
     color: var(--accent);
@@ -234,7 +238,7 @@
 &::after {
     position: absolute;
     content: "";
-    bottom: 0;
+    bottom: 3px;
     left: 0;
     border-radius: 2px;
     width: 100%;
@@ -243,18 +247,16 @@
 }
 }
 .header-contacts {
-    // display: flex;
-    flex-direction: row;
-    text-align: left;
-    margin-left: 80px;
-    
     @media screen and(min-width:768px) {
         flex-direction: row;
+        text-align: left;
+        margin-left: 80px;
     }
 
     @media screen and(min-width:1200px) {
-        flex-direction: row;
-        gap: 30px;
+        display: flex;
+        align-items: center;
+        margin-left: 305px;
     }
 
     @media screen and (max-width: 767px) {
@@ -264,6 +266,12 @@
 .header-contacts__item {
     text-align: left;
     align-items: center;
+    @media screen and(min-width:1200px) {
+        text-align: center;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
 .header-contacts__link {
     font-style: normal;
@@ -292,10 +300,10 @@
 }
 }
 
-.header-contacts__link--indent {
+// .header-contacts__link--indent {
     // margin-right: 30px;
     
-}
+// }
 .header-contacts__icon {
     margin-right: 10px;
 }

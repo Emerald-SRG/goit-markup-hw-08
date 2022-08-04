@@ -177,8 +177,7 @@
     width: 370px;
     align-items: left;
     text-align: left;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
 
     @media screen and (min-width: 1200px) {
         width: auto;
@@ -229,13 +228,16 @@
 }
 .modal-agreement__link {
     text-decoration: underline;
-    
     color: #2196F3;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.15em;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width: 1199px) {
+        margin-left: -14px;
+    }
 
     @media screen and (min-width: 1200px) {
         font-size: 14px;

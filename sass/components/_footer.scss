@@ -89,7 +89,11 @@
 .footer-community {
     text-align: center;
     justify-content: center;
-
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        padding-top: 12px;
+    }
+}
    
 .footer-community__title {
     font-style: normal;
@@ -101,7 +105,7 @@
     color: var(--white);
     margin-bottom: 20px;
 }
-}
+
 .footer-community__list {
     display: flex;
     text-align: center;

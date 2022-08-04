@@ -15,6 +15,7 @@
     margin-right: auto;
     padding: auto;
     justify-content: center;
+    flex-wrap: wrap;
 
     @media screen and (min-width:768px) {
         flex-wrap: wrap;
@@ -123,6 +124,11 @@
     overflow: hidden;
 }
 .project-cards__image {
+    max-width: 100%;
+
+    @media screen and (min-width: 768px) {
+        min-width: 354px;
+    }
     @media screen and (min-width: 1200px) {
         width: 370px;
     }
